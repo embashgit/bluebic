@@ -6,7 +6,7 @@ class Slides1 extends Component {
   render() {
     return (
       <div>
-          <div className="main slides">
+          <div className="main fullHeight">
       <div className="wrapper">
       <div id="maroun"/>
         <div className="base-shape">
@@ -32,7 +32,7 @@ export class Slides2 extends Component {
   render() {
     return (
       <div>
-          <div className="main slides">
+          <div className="main fullHeight">
       <div className="wrapper">
       <div id="maroun2"/>
       <div id="moonly2"/>
@@ -46,7 +46,7 @@ export class Slides2 extends Component {
 you can share books and make friends.</p>
         </div>
        
-          <p className="bottom-text"><strong>Skip Intro</strong></p>
+          <p className="bottom-text"><strong><u>Skip Intro</u></strong></p>
         
       </div>
         </div>

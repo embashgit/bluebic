@@ -306,7 +306,7 @@ class AutoRotatingCarousel extends Component {
 
 AutoRotatingCarousel.defaultProps = {
   autoplay: true,
-  interval: 5000,
+  interval: 6000,
   mobile: false,
   open: false,
   hideArrows: false

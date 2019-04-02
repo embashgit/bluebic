@@ -1,0 +1,143 @@
+:root{
+    --primaryFont:CircularStd,sans-serif;
+  }
+.formSection{
+    z-index: 10000;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    height: 100%;
+    padding:10px;
+    width: 33%;
+    flex-direction: column;
+    justify-content: center;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+}
+
+.formControl{
+    z-index:10000 ;
+    position: relative;
+    margin:10px 5px 10px 5px;
+    padding:10px;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+   
+}
+#info{
+    font-family:var(--primaryFont);
+font-size: 15px;
+margin-top: 10px;
+line-height: normal;
+text-align: center;
+
+color: #445984;
+}
+label{
+    position: absolute;
+    left: 12px;
+    opacity: .5;
+    top:-12px;
+    font-size: 13px;
+    font-family: var(--primaryFont);
+}
+#inputLine{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 49px;
+    z-index: 10000;
+    background:  linear-gradient(179.24deg, #BAFB67 -5.37%, #00D23A 196.64%); 
+   
+    /* border-bottom-color:  linear-gradient(179.24deg, #BAFB67 -5.37%, #00D23A 196.64%);  */
+}
+#textField{
+    padding: 0.7em;
+    font-size: 15px;
+    border:0;
+    width: 100%;
+    align-self: auto;
+    outline: 0;
+    z-index: 5000;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-width: 3px;
+    font-family: var(--primaryFont);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#Skyball{
+    position: absolute;
+    top:-80%;
+    right: 0;
+    width: 290px;
+    /* z-index: 10; */
+    height:290px;
+    border-radius: 50%;
+    animation: skywave 10s linear infinite;
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%);
+}
+
+#skyball2{
+    position: absolute;
+    top:40%  ;
+    right:30%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 0.5;
+    background:linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+    transform: rotate(-15.82deg);
+}
+#passwordIcon{
+    position:absolute;
+    top:18px;
+    right: 5px;
+}
+.bulbSection{
+    text-align: center;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    padding: 30px;
+    border-radius: 50%;
+    z-index: 10000;
+    background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+}
+
+
+@keyframes skywave{
+    0%{
+        right: 2%;
+        top:-70%;
+        transform: scale(0.5);
+        opacity: 0.6;
+        z-index: 1;
+
+    }
+    30%{
+        right:50%;
+top:70%;
+        transform:scale(0.25);
+        opacity:0;
+        z-index: 0;
+    }
+    60%{
+        right:80%;
+        top:40%;
+        transform:scale(0.5);
+        z-index: 0;
+    }
+    80%{
+        right:90%;
+        top:-70%;
+        transform:scale(0.4);
+        z-index: 0;  
+    }
+    100%{
+        right: 0%;
+        top:-80%;
+        z-index: 0;
+        transform: scale(1);
+
+    }
+}

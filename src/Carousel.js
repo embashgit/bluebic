@@ -16,14 +16,14 @@ class Carousel extends Component {
     return (
       <div>
 <div style={{ position: 'relative', width: '100%', height: 500 }}>
-
   {/* <Button onClick={() => this.setState({ open: true })}>Open carousel</Button> */}
   <AutoRotatingCarousel
-ButtonProps
+   label='View Task'
 mobile={true}
     open={this.state.open}
-    onClose={() => this.setState({ open: false })}
-    onStart={() => this.setState({ open: false })}
+    // onClose={() => this.setState({ open: false })}
+    // onStart={() => this.setState({ open: false })}
+
   >
     <Slides1/>
     <Slides2/>
