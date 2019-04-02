@@ -1,27 +1,225 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --primaryFont:'Circular Regular',sans-serif;
+}
+.main {
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(147.21deg, #EEECFF -8.91%, #FFFFFF 99.17%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* overflow: hidden; */
 }
 
-.App-logo {
+.slides{
+  height: 100vh;
+}
+#navbar{
+  position:fixed;
+  right:0;
+}
+
+#navbar ul{
+  padding:0 20px 0 10px;
+  color :#fff;
+}
+
+#navbar ul li{
+  position: relative;
+  flex-direction: row;
+  display: block;
+  margin:30px 0 30px 0;
+  cursor: pointer;
+  padding:10px 20px 30px 10px;
+
+}
+.label{
+  font-family: 'Courier New', Courier, monospace;
+font-size: 18px;
+right:80px;
+top:45px;
+color: rgba(56, 79, 125, 0.8);
+text-shadow:#808080;
+}
+
+#timelinelabel,#notlabel{
+  position: absolute;
+  top: 15px;
+  right: 80px;
+}
+#revewlabel{
+  position: absolute;
+  width: 120px;
+  top:15px;
+  right:80px;
+}
+#booklabel{
+  position: absolute;
+  top: 15px;
+  right:80px;
+  width: 100px;
+}
+#booklabel,#timelinelabel,#notlabel,#revewlabel{
+  display: none;
+}
+
+#books:hover #booklabel{
+display: block;
+}
+
+#notifications:hover #notlabel{
+  display: block;
+}
+
+#Timeline:hover #timelinelabel{
+  display: block;
+}
+#reviews:hover #revewlabel{
+  display: block;
+}
+/* .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
+} */
+.base-shape{
+  margin: auto;
+  text-align: center;
+  height:200px;
+  width:200px;
+  background: linear-gradient(73.12deg, #25CED1 -19.51%, #34E6E9 58.02%, #6AFCFF 138%);
+  border-radius:50%; 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+.button-section{
+  margin-top: 20px;
+}
+#button{
+  padding: 0.9em;
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  line-height: normal;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width:35%;
+  z-index: 1000;
+  box-shadow:  0 10px 20px rgba(0,0,0,0.19);
+  outline: 0;
+  border: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  background: linear-gradient(166.04deg, #BAFB67 -5.37%, #00D23A 196.64%);
+border-radius: 8px;
+}
+.wish-item{
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 20px;
+  flex-direction:row;
+}
+.wish-item-section{
+  margin-top:20px;
+}
+.itemSection{
+  flex-direction: column;
+  display: inline-block;
+  margin:0 40px 5px 40px;
+  /* padding:5px 25px 5px 10px; */
+  text-align: center;
+}
+#rail,#dish,#scar{
+  border-radius:10px;
+  max-width: 100%;
+  box-shadow:  0 10px 20px rgba(0,0,0,0.19);
+}
+.base-mark-circle{
+  margin: auto;
+  width: 126px;
+  height: 126px;
+  background: linear-gradient(117.45deg, rgba(114, 255, 153, 0.6) -91.36%, rgba(0, 210, 58, 0.6) 232.4%);
+  border-radius:50%;
 }
 
-.App-link {
-  color: #61dafb;
+#interested-items{
+  font-family: var(--primaryFont);
+font-size: 12px;
+line-height: normal;
+text-align: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: rgba(56, 79, 125, 0.8);
 }
+.bottom-text{
+  /* position: absolute;
+  bottom: -30%; */
+  /* left: 48%; */
+  font-family: var(--primaryFont);
+  font-size: 18px;
+  line-height: normal;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: auto;
+  color: #445984;
+  margin-top: 100px;
+}
+.star{
+  background: linear-gradient(141.64deg, #FFF17C -3.59%, #FF8B8E 118.04%);
+}
+.wrapper{
+  position: relative;
+  width: 100%;
+  margin-top: -3%;
+}
+#img1{
+  z-index: 500;
+  display: block;
+  /* background-image: url('/src/images/rail.png')no-repeat; */
+}
+#img2{
+  /* background: url('/src/images/scar.png'); */
+}
+#img3{
+  
+}
+.submit{
+  margin-top:3%; 
+}
+#flibbook{
+  margin-top: 28%;
+}
+.text-section{
+  margin-top: 40%;
+}
+
+#mark{
+  margin-top: 24%;
+}
+.description{
+  font-family: var(--primaryFont);
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+color: rgba(56, 79, 125, 0.8);
+}
+
+#header{
+  margin:20px 0 10px 0;
+  font-family: var(--primaryFont);
+  font-size: 25px;
+  line-height: normal;
+  text-align: center;
+  color: #384F7D;
+}
+/* 
 
 @keyframes App-logo-spin {
   from {
@@ -30,4 +228,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

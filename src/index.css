@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Circular FC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Circular FC'), local('CircularFC'), url('/src/fonts/Circular\ FC.ttf') format('ttf');
+}
+
+@font-face{
+  font-family: 'Circular Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Circular Regular'), url('/src//fonts/Circular\ Regular.ttf') format('ttf');
+
+}
 body {
   margin: 0;
   padding: 0;
@@ -7,6 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
