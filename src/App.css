@@ -3,7 +3,7 @@
   padding: 0;
 }
 :root{
-  --primaryFont:'Circular Regular',sans-serif;
+  --primaryFont:CircularStd,sans-serif;
 }
 .main {
   display: flex;
@@ -41,14 +41,64 @@
 
 }
 .label{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: CircularStd;
 font-size: 18px;
 right:80px;
 top:45px;
 color: rgba(56, 79, 125, 0.8);
 text-shadow:#808080;
 }
-
+p{
+  font-family: CircularStd;
+}
+#maroun{
+   position: absolute; 
+  opacity: 0.6;
+top: -120px;
+ left: 20%;
+height: 150px;
+border-radius: 50%;
+width: 150px;
+z-index: 2;
+  background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+  transform: rotate(-15.82deg); 
+} 
+#maroun2{
+  position: absolute; 
+ opacity: 0.4;
+top: 120px;
+left: 20%;
+height: 60px;
+border-radius: 50%;
+width: 60px;
+z-index: 2;
+ background: linear-gradient(228.76deg, #2DEEF9 -34.42%, #E084F1 127.18%);
+ transform: rotate(-15.82deg); 
+} 
+#moonly2{
+  position: absolute;
+  opacity: 0.3;
+top: 50px;
+ right: 10%;
+/* bottom: 83.37%; */
+height: 80px;
+border-radius: 50%;
+width: 80px;
+z-index: 2;
+  background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+}
+#moonly{
+  position: absolute;
+  opacity: 0.3;
+top: 50px;
+ right: 10%;
+/* bottom: 83.37%; */
+height: 80px;
+border-radius: 50%;
+width: 80px;
+z-index: 2;
+  background: linear-gradient(147.47deg, #FEB665 24.48%, #F66EB4 118.65%);
+}
 #timelinelabel,#notlabel{
   position: absolute;
   top: 15px;
@@ -94,6 +144,7 @@ display: block;
   text-align: center;
   height:200px;
   width:200px;
+  z-index: 1000;
   background: linear-gradient(73.12deg, #25CED1 -19.51%, #34E6E9 58.02%, #6AFCFF 138%);
   border-radius:50%; 
 
@@ -144,6 +195,7 @@ border-radius: 8px;
   margin: auto;
   width: 126px;
   height: 126px;
+  z-index: 1000;
   background: linear-gradient(117.45deg, rgba(114, 255, 153, 0.6) -91.36%, rgba(0, 210, 58, 0.6) 232.4%);
   border-radius:50%;
 }
