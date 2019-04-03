@@ -3,7 +3,7 @@ import HomeIcon from './images/svgIcons/Home';
 import BookIcon from './images/svgIcons/BookIcon';
 import StarIcon from './images/svgIcons/StarIcon';
 import NotificationIcon from './images/svgIcons/NotificationIcon';
-
+import {Link} from 'react-router-dom';
 
 const markImg = require('../src/images/mark.png');
 export const iconSize={
@@ -19,16 +19,21 @@ class Submittion extends Component {
             <div id="navbar">
             <ul>
                 <li id="Timeline">
+                <Link className="link" to="/">
                 <HomeIcon height={iconSize.height} width={iconSize.width}/>
                 <p id="timelinelabel" className='label'>Timeline</p>
+                </Link>
                 </li>
                 <li id="books">
+                <Link className="link" to="/mybooks">
                 <BookIcon height={iconSize.height} width={iconSize.width}/>
                 <p  id="booklabel" className='label'>My Books</p>
+                </Link>
                 </li>
-                <li id="reviews">
+                <li id="reviews"><Link className="link" to="/review">
                 <StarIcon height={iconSize.height} width={iconSize.width}/>
                 <p id="revewlabel" className='label'>Add Reviews</p>
+                </Link>
                 </li>
                 <li id="notifications">
                 <NotificationIcon height={iconSize.height} width={iconSize.width}/>

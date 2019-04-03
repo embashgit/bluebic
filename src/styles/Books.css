@@ -1,0 +1,71 @@
+:root{
+    --primaryFont:CircularStd,sans-serif;
+  }
+
+  .cloudNav{
+    align-self: center;
+    align-items: center;
+      width:1500px;
+      height: 230px;
+      border-radius: 50%;
+      background: linear-gradient(210.28deg, #FEB665 37.28%, #F66EB4 76.65%);
+      position:fixed;
+       top:-90px;
+       left:-40px;
+  }
+
+  #book-title{
+    position:fixed;
+    top:40px;
+     z-index:1000;
+    right:38%;
+    color:#fff;
+     font-family: var(--primaryFont);
+  }
+  .searchbox{
+    position:fixed;
+    top:110px;
+     z-index:1000;
+    right:30%;
+    width:40%;
+  }
+ #bookSearchInput{
+    padding: 0.7em;
+    font-size: 25px;
+    border:0;
+    width: 100%;
+    align-self: auto;
+    outline: 0;
+    z-index: 5000;
+   border-radius:12px;
+    font-family: var(--primaryFont);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ }
+
+ #searchIcon{
+    position: absolute;
+    right: 0;
+    top:18px;
+    height: 30px;
+    width: 30px;
+ }
+ @media (min-width:320px) and (max-width:500px){
+    #bookSearchInput{
+        font-size: 14px;
+    }
+    .searchbox{
+        width: 60%;
+        top:90px;
+        right:22%;
+    }
+    #book-title{
+        font-size: 20px;
+        top:40px;
+       right:33%;
+    }
+    #searchIcon{
+        top:12px;
+        height: 15px;
+        width: 15px;
+    }
+ }

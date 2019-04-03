@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "circular-std";
 import BolbIcon from './images/svgIcons/BolbIcon';
 import InputComponent from './InputComponent';
-import passwordIcon from './images/svgIcons/passwordIcon';
+import { Link } from 'react-router-dom'
 
 const visibility =require('./images/password.png');
 class Form extends Component {
@@ -18,8 +18,6 @@ class Form extends Component {
             </div>
             <div style={{ display: 'block' }}>
               <h1 style={{ fontSize: 30 }} id="header">Welcome!</h1>
-          
-
               <p style={{ marginBottom: 10 }} className="description">Create your account to get started.<br /> After that,
 you can share books and make friends.</p>
             </div>
@@ -35,7 +33,7 @@ you can share books and make friends.</p>
               label="Type Password Again" key="confirmpassworm"  placeholder="Re-Type Password"
               />
 
-              <button style={{width:'100%',padding:'1em', marginTop:20,marginLeft:10}} id="button">Sign Up</button>
+              <button style={{width:'100%',padding:'1em', marginTop:20,marginLeft:10}} id="button"><Link to="/invite" style={{textDecoration:'none',color:'#fff'}} >Sign Up</Link></button>
               <p id="info">Already have an account? Login   </p>
             </div>
 
