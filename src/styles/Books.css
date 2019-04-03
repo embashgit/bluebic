@@ -14,6 +14,57 @@
        left:-40px;
   }
 
+  .desc{
+      text-align: justify;
+      padding:10px;
+  }
+  #card-title{
+      font-size:14px;
+  }
+  .card-item{
+      display: inline-block;
+  }
+  .desc img{
+    display: inline-block;
+  }
+  .desc p{
+      margin:10px 0 30px 0; 
+  }
+  .book-section{
+      padding:5px;
+      margin-top: 10%;
+      width: 80%;
+  }
+  #mybooksheader{
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(56, 79, 125, 0.8);
+      text-align: left;
+      margin-left: 100px;
+      font-family: var(--primaryFont);
+  }
+.cards{
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    padding:15px 10px 5px 10px;
+    margin:15px 10px 10px 10px;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+  .cardSection{
+      font-family: var(--primaryFont);
+      padding: 10px;
+      justify-content: center;
+      text-align: center;
+      flex-direction: row;
+  }
+  .drawer{
+      height:100vh;
+      background:  #F66EB4 ;
+      color: #fff
+  }
   #book-title{
     position:fixed;
     top:40px;
@@ -57,6 +108,12 @@
         width: 60%;
         top:90px;
         right:22%;
+    }
+    #mybooksheader{
+        margin-left: 30px;
+    }
+    .book-section{
+        margin-top: 100%;
     }
     #book-title{
         font-size: 20px;

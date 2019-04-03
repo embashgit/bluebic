@@ -3,12 +3,6 @@ import "circular-std";
 import './App.css';
 import './styles/Form.css';
 import { Switch,BrowserRouter, Route, Router } from 'react-router-dom'
-import Slides1, { Slides2 } from './Slides';
-import Submittion from './Submittion';
-import Carousel from './Carousel';
-import Form from './Form';
-import Books from './Books';
-
 import routeDefinitions from './routes'
 
 class App extends Component {

@@ -278,6 +278,13 @@ line-height: 22px;
 text-align: center;
 color: rgba(56, 79, 125, 0.8);
 }
+.menu{
+  position:fixed;
+  top:40px;
+   z-index:1000;
+  
+   left:4%;
+}
 
 #header{
   margin:20px 0 10px 0;
