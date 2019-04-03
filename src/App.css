@@ -40,6 +40,7 @@
   height: 100vh;
 }
 #navbar{
+  z-index: 100000;
   position:fixed;
   right:0;
 }
@@ -366,4 +367,10 @@ color: rgba(56, 79, 125, 0.8);
     padding: 0 10px 0 10px;
   }
   
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  #navbar{
+    display: none;
+  }
 }

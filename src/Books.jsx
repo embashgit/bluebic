@@ -15,6 +15,8 @@ import HomeIcon from './images/svgIcons/Home';
 import BookIcon from './images/svgIcons/BookIcon';
 import StarIcon from './images/svgIcons/StarIcon';
 import NotificationIcon from './images/svgIcons/NotificationIcon';
+
+
 const styles = {
   paper:{
     background: 'linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%),'
@@ -27,36 +29,8 @@ const styles = {
   },
 
 };
-
-const search = require('../src/images/search.png');
-// const starImg = require('../src/images/search.png');
-
-const remoteJob = require('./images/remote.png');
-const movie1 = require('./images/stephen.png');
-const movie2 = require('./images/movie-king.png')
-const likes = require('./images/likes.png');
-const unlike = require('./images/unlike.png');
-const menu =require('./images/icons-menu.png');
-
-class Books extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      SidebarVisibility:false,
-    }
-  }
-
-  toggleDrawer = () => {
-    this.setState(state => ({ SidebarVisibility: !this.state.SidebarVisibility }));
-  };
- 
-  render() {
-    const {classes} = this.props
-
-
-    
-const sideList = (
-  <div className={classes.list}>
+export  const sideList = (
+  <div style={{width:250}}>
  
     <List>
       <Link to="/" className="link" >
@@ -84,7 +58,7 @@ const sideList = (
     <Link  className="link" to="/signup">
       <ListItem button >
       <ListItemIcon>
-        <BookIcon height={25} width={25}/>
+      <img src={require('./images/user.png')} height={25} width={25} />
       </ListItemIcon>
       <ListItemText >Account</ListItemText >
       </ListItem>
@@ -96,7 +70,7 @@ const sideList = (
     <Link  className="link" to="/invite">
       <ListItem button >
       <ListItemIcon>
-        <BookIcon height={25} width={25}/>
+      <img src={require('./images/invitation.png')} height={25} width={25} />
       </ListItemIcon>
       <ListItemText >Invite</ListItemText >
       </ListItem>
@@ -126,6 +100,33 @@ const sideList = (
 
   </div>
 );
+
+
+const search = require('../src/images/search.png');
+// const starImg = require('../src/images/search.png');
+
+const remoteJob = require('./images/remote.png');
+const movie1 = require('./images/stephen.png');
+const movie2 = require('./images/movie-king.png')
+const likes = require('./images/likes.png');
+const unlike = require('./images/unlike.png');
+const menu =require('./images/icons-menu.png');
+
+class Books extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      SidebarVisibility:false,
+    }
+  }
+
+  toggleDrawer = () => {
+    this.setState(state => ({ SidebarVisibility: !this.state.SidebarVisibility }));
+  };
+ 
+  render() {
+    const {classes} = this.props
+
     return (
       <div>
          <Drawer  open={this.state.SidebarVisibility} onClose={this.toggleDrawer}>
@@ -158,7 +159,7 @@ const sideList = (
               <div className="cards">
                 <img  className="card-item" src={remoteJob} alt="remoteJob-image" />
                 <div  className="desc card-item">
-                  <h3 className="card-title">Remote: Office Not<br/> Required</h3>
+                <h3 id="card-title">Not Remote: Full Time<br/> Required</h3>
                   <p>Jason Fried</p>
                   <img src={likes} alt="fav-image" />
                   <img src={likes} alt="fav-image" />
@@ -170,7 +171,7 @@ const sideList = (
               <div className="cards">
                 <img  className="card-item" src={movie1} alt="movie-image" />
                 <div  className="desc card-item">
-                <h3 id="card-title">Papillon<br/></h3>
+                <h3 id="card-title">Full time: Remote Not<br/> Required</h3>
                   <p>Henri Charriere</p>
                   <img src={likes} alt="fav-image" />
                   <img src={likes} alt="fav-image" />

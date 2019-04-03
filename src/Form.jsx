@@ -2,13 +2,37 @@ import React, { Component } from 'react'
 import "circular-std";
 import BolbIcon from './images/svgIcons/BolbIcon';
 import InputComponent from './InputComponent';
-import { Link } from 'react-router-dom'
+import HomeIcon from './images/svgIcons/Home';
+import BookIcon from './images/svgIcons/BookIcon';
+import StarIcon from './images/svgIcons/StarIcon';
+import NotificationIcon from './images/svgIcons/NotificationIcon';
+import {Link} from 'react-router-dom';
+import { sideItems } from './Submittion';
 
+ const iconSize={
+  height:25,
+  width:25,
+}
 const visibility =require('./images/password.png');
 class Form extends Component {
+
+constructor(props){
+  super(props)
+this.state={
+  vissible:false,
+}
+}
+
+togglePassword = () => {
+ 
+  this.setState(state => ({ vissible: !this.state.vissible }));
+ 
+};
+
   render() {
     return (
-      <div>
+      <div id="finvite">
+        {sideItems}
         <div style={{paddingTop:25}} className="main fullHeight">
           <div className="wrapper">
             <div id="Skyball" />
@@ -25,12 +49,12 @@ you can share books and make friends.</p>
              <InputComponent name="Email" type="email" key="email"
              labelStyle={{top:-15}}
               label="Email" placeholder="email@bluebic.com"/>
-              <InputComponent type="password" Icon={<img src={visibility} />} name="password" 
+              <InputComponent type={this.state.vissible ? 'password':'text'} onIconClick={this.togglePassword} Icon={<img src={visibility} />} name="password" 
               label="Password"key="password" placeholder="Enter Password"
               />
 
-    <InputComponent type="password" Icon={<img src={visibility}/>} name="password" 
-              label="Type Password Again" key="confirmpassworm"  placeholder="Re-Type Password"
+    <InputComponent  type={this.state.vissible ? 'password':'text'} onIconClick={this.togglePassword} Icon={<img src={visibility}/>} name="password" 
+              label="Type Password Again" key="confirmpassword"  placeholder="Re-Type Password"
               />
 
               <button style={{width:'100%',padding:'1em', marginTop:20,marginLeft:10}} id="button"><Link to="/invite" style={{textDecoration:'none',color:'#fff'}} >Sign Up</Link></button>

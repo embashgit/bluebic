@@ -39,7 +39,7 @@
   }
   .book-section{
       padding:5px;
-      margin-top: 10%;
+      margin-top: 16%;
       width: 80%;
   }
   #mybooksheader{
@@ -134,7 +134,7 @@ color: rgba(56, 79, 125, 0.8);
     height: 30px;
     width: 30px;
  }
- @media (min-width:320px) and (max-width:500px){
+ @media (min-width:320px) and (max-width:650px){
     #bookSearchInput{
         font-size: 14px;
     }
@@ -147,7 +147,7 @@ color: rgba(56, 79, 125, 0.8);
         margin-left: 30px;
     }
     .book-section{
-        margin-top: 70%;
+        margin-top: 200%;
     }
     .review-sec{
         margin-top:20%;

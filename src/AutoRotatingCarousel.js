@@ -16,7 +16,7 @@ import Carousel from './SwipableCarouselView'
 import { modulo } from './util'
 import color from '@material-ui/core/colors/cyan';
 import Media from 'react-media';
-
+import {Link} from 'react-router-dom';
 const styles = {
   root: {
     '& > *:focus': {
@@ -241,13 +241,16 @@ class AutoRotatingCarousel extends Component {
                   [classes.footerMobileLandscape]: landscape
                 })}
               >
-                {label && <Button
+                {label &&  <Link className="link" to="/signup">
+                <Button
                   variant='contained'
                   onClick={onStart}
                   {...ButtonProps}
                 >
                   {label}
-                </Button>}
+                </Button>
+                </Link>
+                }
                 {
                   hasMultipleChildren &&
                   <Dots

@@ -10,38 +10,43 @@ export const iconSize={
     height:25,
     width:25,
 }
+
+export const sideItems = (
+  <div id="navbar">
+  <ul>
+      <li id="Timeline">
+      <Link className="link" to="/">
+      <HomeIcon height={iconSize.height} width={iconSize.width}/>
+      <p id="timelinelabel" className='label'>Timeline</p>
+      </Link>
+      </li>
+      <li id="books">
+      <Link className="link" to="/mybooks">
+      <BookIcon height={iconSize.height} width={iconSize.width}/>
+      <p  id="booklabel" className='label'>My Books</p>
+      </Link>
+      </li>
+      <li id="reviews"><Link className="link" to="/review">
+      <StarIcon height={iconSize.height} width={iconSize.width}/>
+      <p id="revewlabel" className='label'>Add Reviews</p>
+      </Link>
+      </li>
+      <li id="notifications"><Link className="link" to="/invite">
+      <NotificationIcon height={iconSize.height} width={iconSize.width}/>
+      <p id="notlabel" className='label'>Notifications</p>
+      </Link>
+      </li>
+  </ul>
+
+  </div>
+)
 class Submittion extends Component {
   render() {
     return (
       <div>
           <div className="main">
             <div className="wrapper submit">
-            <div id="navbar">
-            <ul>
-                <li id="Timeline">
-                <Link className="link" to="/">
-                <HomeIcon height={iconSize.height} width={iconSize.width}/>
-                <p id="timelinelabel" className='label'>Timeline</p>
-                </Link>
-                </li>
-                <li id="books">
-                <Link className="link" to="/mybooks">
-                <BookIcon height={iconSize.height} width={iconSize.width}/>
-                <p  id="booklabel" className='label'>My Books</p>
-                </Link>
-                </li>
-                <li id="reviews"><Link className="link" to="/review">
-                <StarIcon height={iconSize.height} width={iconSize.width}/>
-                <p id="revewlabel" className='label'>Add Reviews</p>
-                </Link>
-                </li>
-                <li id="notifications">
-                <NotificationIcon height={iconSize.height} width={iconSize.width}/>
-                <p id="notlabel" className='label'>Notifications</p>
-                </li>
-            </ul>
-
-            </div>
+           {sideItems}
             <div className="base-mark-circle">
           <img id="mark" src={markImg} />
         </div>

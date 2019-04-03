@@ -14,6 +14,7 @@ import HomeIcon from './images/svgIcons/Home';
 import BookIcon from './images/svgIcons/BookIcon';
 import StarIcon from './images/svgIcons/StarIcon';
 import NotificationIcon from './images/svgIcons/NotificationIcon';
+import { sideList } from './Books';
 const styles = {
   paper:{
     background: 'linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%),'
@@ -54,19 +55,19 @@ class Review extends Component {
 
 
     
-const sideList = (
-  <div className={classes.list}>
-    <List>
-      {['TimeLine', 'My Books', 'Accout', 'Review'].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
+// const sideList = (
+//   <div className={classes.list}>
+//     <List>
+//       {['TimeLine', 'My Books', 'Accout', 'Review'].map((text, index) => (
+//         <ListItem button key={text}>
+//           <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+//           <ListItemText primary={text} />
+//         </ListItem>
+//       ))}
       
-    </List>
-  </div>
-);
+//     </List>
+//   </div>
+// );
     return (
       <div>
          <Drawer  open={this.state.SidebarVisibility} onClose={this.toggleDrawer}>
