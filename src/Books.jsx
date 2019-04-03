@@ -10,7 +10,11 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-
+import {Link} from 'react-router-dom';
+import HomeIcon from './images/svgIcons/Home';
+import BookIcon from './images/svgIcons/BookIcon';
+import StarIcon from './images/svgIcons/StarIcon';
+import NotificationIcon from './images/svgIcons/NotificationIcon';
 const styles = {
   paper:{
     background: 'linear-gradient(315deg, rgba(255, 255, 255, 0.61) 3.5%, rgba(121, 171, 252, 0.61) 93.61%, rgba(96, 108, 255, 0.61) 147.83%),'
@@ -53,15 +57,73 @@ class Books extends Component {
     
 const sideList = (
   <div className={classes.list}>
+ 
     <List>
-      {['TimeLine', 'My Books', 'Accout', 'Review'].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
-      
+      <Link to="/" className="link" >
+      <ListItem button >
+      <ListItemIcon>
+        <HomeIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >Home</ListItemText >
+      </ListItem>
+      </Link>
     </List>
+
+    <List>
+    <Link  className="link" to="/mybooks">
+      <ListItem button >
+      <ListItemIcon>
+        <BookIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >My Books</ListItemText >
+      </ListItem>
+      </Link >
+    </List>
+
+    <List>
+    <Link  className="link" to="/signup">
+      <ListItem button >
+      <ListItemIcon>
+        <BookIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >Account</ListItemText >
+      </ListItem>
+      </Link >
+    </List>
+
+      
+    <List>
+    <Link  className="link" to="/invite">
+      <ListItem button >
+      <ListItemIcon>
+        <BookIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >Invite</ListItemText >
+      </ListItem>
+      </Link >
+    </List>
+
+    <List>
+    <Link  className="link" to="/review">
+      <ListItem button >
+      <ListItemIcon>
+        <StarIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >Review</ListItemText >
+      </ListItem>
+      </Link >
+    </List>
+
+    <List>
+      <ListItem button >
+      <ListItemIcon>
+        <NotificationIcon height={25} width={25}/>
+      </ListItemIcon>
+      <ListItemText >NotificationIcon</ListItemText >
+      </ListItem>
+    </List>
+    
+
   </div>
 );
     return (
@@ -96,7 +158,7 @@ const sideList = (
               <div className="cards">
                 <img  className="card-item" src={remoteJob} alt="remoteJob-image" />
                 <div  className="desc card-item">
-                  <h3 id="card-title">Remote: Office Not<br/> Required</h3>
+                  <h3 className="card-title">Remote: Office Not<br/> Required</h3>
                   <p>Jason Fried</p>
                   <img src={likes} alt="fav-image" />
                   <img src={likes} alt="fav-image" />
@@ -133,8 +195,8 @@ const sideList = (
                 </div>
               </div>
             </div>
-            <div>
-              <button style={{width:'100%', marginTop:'5%'}} id="button">
+            <div style={{marginBottom:50}}>
+              <button style={{width:'70%', marginTop:'5%'}} id="button">
               Add Book Review
               </button>
             </div>
