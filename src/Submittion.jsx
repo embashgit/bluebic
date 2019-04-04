@@ -55,7 +55,7 @@ class Submittion extends Component {
           <p style={{color: 'rgba(56, 79, 125, 0.8)'}} className="description">You have submitted your first book <br/>review.
 Now it’s time to make some friends.</p>
         <div className="button-section">
-        <Link className="link" to="/mybooks">
+        <Link className="link" to="/signup">
             <button id="button">
                 Add Friends
             </button>

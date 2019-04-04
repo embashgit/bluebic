@@ -57,7 +57,7 @@ you can share books and make friends.</p>
               label="Type Password Again" key="confirmpassword"  placeholder="Re-Type Password"
               />
 
-              <button style={{width:'100%',padding:'1em', marginTop:20,marginLeft:10}} id="button"><Link to="/invite" style={{textDecoration:'none',color:'#fff'}} >Sign Up</Link></button>
+              <button style={{width:'100%',padding:'1em', marginTop:20,marginLeft:10}} id="button"><Link to="/mybooks" style={{textDecoration:'none',color:'#fff'}} >Sign Up</Link></button>
               <p id="info">Already have an account? Login   </p>
             </div>
 
