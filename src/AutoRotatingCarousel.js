@@ -56,14 +56,14 @@ const styles = {
   arrowLeft: {
     // left: -96
     left: 96,
-    top:450,
+    top:420,
     background: 'linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%)',
   
   },
   arrowRight: {
     // right: -96
     right: 96,
-    top:450,
+    top:420,
     background: 'linear-gradient(125.58deg, #BAFB67 -5.37%, #00D23A 196.64%)'
   },
   arrowIcon: {
@@ -241,7 +241,7 @@ class AutoRotatingCarousel extends Component {
                   [classes.footerMobileLandscape]: landscape
                 })}
               >
-                {label &&  <Link className="link" to="/signup">
+                {label &&  <Link className="link" to="/mybooks">
                 <Button
                   variant='contained'
                   onClick={onStart}
